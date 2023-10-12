@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: conic-gradient(from 304deg at 50% 80%, transparent 16%, #38bdf8 75%);
+  filter: blur(139px);
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.custom_scroll {
+  scrollbar-width: auto;
+  scrollbar-color: #24799e #e5f5ff;
+}
+
+/* Chrome, Edge, and Safari */
+.custom_scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+.custom_scroll::-webkit-scrollbar-track {
+  background-color: #9ad3f778;
+  cursor: pointer;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb {
+  background-color: #24799e;
+  border-radius: 10px;
+  border: 2px outset #75c7f0;
+  cursor: pointer;
+}
+
+.login_wrapper::after {
+  content: "";
+  position: absolute;
+  background-color: #aee1fc;
+  right: -154px;
+  bottom: -64px;
+  height: 50%;
+  width: 100%;
+  z-index: -1;
+  transform: rotate(129deg);
+}
+
+.section_title::after {
+  content: "";
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 4px 0 0 0;
+  border: 2px solid #0000003d;
+  border-bottom: transparent;
+  border-right: transparent;
+}

@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+}
+@layer components {
+  .add_pro_to .decoration_add_to {
+    display: block;
+    background-color: #306479;
+    padding: 0px 16px;
+    border-radius: 10px;
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    color: #d2f9ff9e;
+  }
+
+  .add_pro_to .decoration_add_to::after,
+  .add_pro_to .decoration_add_to::before {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+    top: 49%;
+    transform: translate(0, -48%);
+  }
+  .add_pro_to .decoration_add_to::after {
+    right: -23px;
+    border-left: 20px solid #306479;
+  }
+
+  .add_pro_to .decoration_add_to::before {
+    left: -23px;
+    border-right: 20px solid #306479;
+  }
+
+  .carousel_wrapper .thumbnails > div {
+    flex: 0 0 100px;
+  }
+}
+
+@layer utilities {
+  .offers_areas_layout {
+    grid-template-areas: "one two" "one three";
+  }
+
+  .area_one {
+    grid-area: one;
+  }
+  .area_two {
+    grid-area: two;
+  }
+  .area_three {
+    grid-area: three;
+  }
+  .product_page_area_layout {
+    grid-template-areas: "one two" "three three";
+  }
+}
